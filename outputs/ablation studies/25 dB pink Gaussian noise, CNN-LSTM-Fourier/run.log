@@ -1,0 +1,65 @@
+[2025-01-04 10:17:15,650][__main__][INFO] - INFO LEVEL MESSAGE: 
+
+[2025-01-04 10:17:15,654][__main__][INFO] - CONFIG: 
+data:
+  system: duffing
+  type: nonautonomous
+  split_ratio: 0.7
+  noise_ratio: 0.11
+model:
+  fno_flag: true
+  kernel_size: 128
+  filters: 64
+  kernel_size_1: 4
+  modes: 200
+  velocity_modes: 2000
+  input_dim: 1
+  lifting_dim: 64
+  output_dim: 1
+  output_dim_parallel: 1
+training:
+  batch_size: 5
+  pretrain_epochs: 1800
+  pretrain_lr: 0.001
+  network_epochs: 800
+  network_initial_lr: 0.001
+  network_decay_steps: 100
+  network_decay_rate: 0.98
+  network_minimum_lr: 0.0005
+  physics_epochs: 1000
+  physics_initial_lr: 0.01
+  physics_decay_steps: 100
+  physics_decay_rate: 0.96
+  physics_minimum_lr: 0.001
+  alternate_number: 0
+  lambda_velocity_int: 0.002
+  lambda_l1: 1.0e-06
+dirs:
+  figures: ./figures/
+  results: ./results/
+  checkpoints: ./checkpoints/
+  profiler: ./tboard/profiler/
+  graphs: ./tboard/graphs/
+  training: ./tboard/training/
+  validation: ./tboard/validation/
+  weights: ./tboard/weights/
+
+[2025-01-04 10:17:19,343][__main__][INFO] - Pretrain the displacement network
+[2025-01-04 10:17:24,398][__main__][INFO] - Epoch: 1/1800, learning_rate: 0.001000, Training: 8.0735e-02, Validation: 5.5540e-02, 
+[2025-01-04 10:17:57,001][__main__][INFO] - Epoch: 101/1800, learning_rate: 0.001000, Training: 2.8781e-04, Validation: 2.9262e-04, 
+[2025-01-04 10:18:28,383][__main__][INFO] - Epoch: 201/1800, learning_rate: 0.001000, Training: 2.8048e-04, Validation: 2.8954e-04, 
+[2025-01-04 10:19:03,026][__main__][INFO] - Epoch: 301/1800, learning_rate: 0.001000, Training: 2.8037e-04, Validation: 3.0294e-04, 
+[2025-01-04 10:19:37,170][__main__][INFO] - Epoch: 401/1800, learning_rate: 0.001000, Training: 2.8229e-04, Validation: 2.8813e-04, 
+[2025-01-04 10:20:10,068][__main__][INFO] - Epoch: 501/1800, learning_rate: 0.001000, Training: 3.4827e-04, Validation: 4.8162e-04, 
+[2025-01-04 10:20:43,131][__main__][INFO] - Epoch: 601/1800, learning_rate: 0.001000, Training: 2.9718e-04, Validation: 3.0278e-04, 
+[2025-01-04 10:21:15,730][__main__][INFO] - Epoch: 701/1800, learning_rate: 0.001000, Training: 2.6952e-04, Validation: 2.7882e-04, 
+[2025-01-04 10:21:47,890][__main__][INFO] - Epoch: 801/1800, learning_rate: 0.001000, Training: 2.7662e-04, Validation: 2.8336e-04, 
+[2025-01-04 10:22:19,728][__main__][INFO] - Epoch: 901/1800, learning_rate: 0.001000, Training: 2.7246e-04, Validation: 2.8054e-04, 
+[2025-01-04 10:22:51,565][__main__][INFO] - Epoch: 1001/1800, learning_rate: 0.001000, Training: 2.7069e-04, Validation: 2.8061e-04, 
+[2025-01-04 10:23:23,465][__main__][INFO] - Epoch: 1101/1800, learning_rate: 0.001000, Training: 2.7995e-04, Validation: 3.0254e-04, 
+[2025-01-04 10:23:56,514][__main__][INFO] - Epoch: 1201/1800, learning_rate: 0.001000, Training: 2.7960e-04, Validation: 2.8981e-04, 
+[2025-01-04 10:24:27,871][__main__][INFO] - Epoch: 1301/1800, learning_rate: 0.001000, Training: 2.7066e-04, Validation: 2.8030e-04, 
+[2025-01-04 10:24:59,471][__main__][INFO] - Epoch: 1401/1800, learning_rate: 0.001000, Training: 2.8574e-04, Validation: 2.7750e-04, 
+[2025-01-04 10:25:30,996][__main__][INFO] - Epoch: 1501/1800, learning_rate: 0.001000, Training: 2.7707e-04, Validation: 2.9415e-04, 
+[2025-01-04 10:26:02,279][__main__][INFO] - Epoch: 1601/1800, learning_rate: 0.001000, Training: 3.6315e-04, Validation: 2.8839e-04, 
+[2025-01-04 10:26:33,634][__main__][INFO] - Epoch: 1701/1800, learning_rate: 0.001000, Training: 2.6934e-04, Validation: 2.7758e-04, 

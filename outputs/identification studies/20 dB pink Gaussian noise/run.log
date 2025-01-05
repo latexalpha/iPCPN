@@ -1,0 +1,385 @@
+[2025-01-03 20:33:34,590][__main__][INFO] - INFO LEVEL MESSAGE: 
+
+[2025-01-03 20:33:34,593][__main__][INFO] - CONFIG: 
+data:
+  system: duffing
+  type: nonautonomous
+  split_ratio: 0.7
+  noise_ratio: 0.19
+model:
+  fno_flag: true
+  kernel_size: 128
+  filters: 64
+  kernel_size_1: 4
+  modes: 200
+  velocity_modes: 2000
+  input_dim: 1
+  lifting_dim: 64
+  output_dim: 1
+  output_dim_parallel: 1
+training:
+  batch_size: 5
+  pretrain_epochs: 1000
+  pretrain_lr: 0.001
+  network_epochs: 800
+  network_initial_lr: 0.001
+  network_decay_steps: 100
+  network_decay_rate: 0.98
+  network_minimum_lr: 0.0005
+  physics_epochs: 1000
+  physics_initial_lr: 0.01
+  physics_decay_steps: 100
+  physics_decay_rate: 0.96
+  physics_minimum_lr: 0.001
+  alternate_number: 8
+  lambda_velocity_int: 0.002
+  lambda_l1: 1.0e-06
+dirs:
+  figures: ./figures/
+  results: ./results/
+  checkpoints: ./checkpoints/
+  profiler: ./tboard/profiler/
+  graphs: ./tboard/graphs/
+  training: ./tboard/training/
+  validation: ./tboard/validation/
+  weights: ./tboard/weights/
+
+[2025-01-03 20:33:39,004][__main__][INFO] - Pretrain the displacement network
+[2025-01-03 20:33:48,900][__main__][INFO] - Epoch: 1/1000, learning_rate: 0.001000, Training: 6.0364e-02, Validation: 3.8095e-02, 
+[2025-01-03 20:34:23,269][__main__][INFO] - Epoch: 101/1000, learning_rate: 0.001000, Training: 6.7589e-04, Validation: 6.7537e-04, 
+[2025-01-03 20:34:55,775][__main__][INFO] - Epoch: 201/1000, learning_rate: 0.001000, Training: 6.2502e-04, Validation: 6.3291e-04, 
+[2025-01-03 20:35:27,190][__main__][INFO] - Epoch: 301/1000, learning_rate: 0.001000, Training: 6.2110e-04, Validation: 6.3733e-04, 
+[2025-01-03 20:35:59,240][__main__][INFO] - Epoch: 401/1000, learning_rate: 0.001000, Training: 6.1868e-04, Validation: 6.3546e-04, 
+[2025-01-03 20:36:30,920][__main__][INFO] - Epoch: 501/1000, learning_rate: 0.001000, Training: 6.1455e-04, Validation: 6.3097e-04, 
+[2025-01-03 20:37:03,072][__main__][INFO] - Epoch: 601/1000, learning_rate: 0.001000, Training: 7.5077e-04, Validation: 9.5684e-04, 
+[2025-01-03 20:37:34,497][__main__][INFO] - Epoch: 701/1000, learning_rate: 0.001000, Training: 6.1579e-04, Validation: 6.3190e-04, 
+[2025-01-03 20:38:06,223][__main__][INFO] - Epoch: 801/1000, learning_rate: 0.001000, Training: 6.1941e-04, Validation: 6.3515e-04, 
+[2025-01-03 20:38:38,012][__main__][INFO] - Epoch: 901/1000, learning_rate: 0.001000, Training: 6.1271e-04, Validation: 6.3391e-04, 
+[2025-01-03 20:39:10,444][__main__][INFO] - ------------------------------------------------------------------------------------------------------
+[2025-01-03 20:39:10,444][__main__][INFO] - Iteration 1, Physics training
+[2025-01-03 20:39:10,961][__main__][INFO] - Epoch: 1/1000, learning_rate: 0.009988, Training: 2.3632e-03, 
+Validation: 2.2742e-03, velocity: 1.1267e+00, l1: 2.0854e+01
+[2025-01-03 20:39:54,363][__main__][INFO] - Epoch: 101/1000, learning_rate: 0.008837, Training: 9.4402e-05, 
+Validation: 9.4281e-05, velocity: 4.2847e-02, l1: 8.5874e+00
+[2025-01-03 20:40:37,320][__main__][INFO] - Epoch: 201/1000, learning_rate: 0.007818, Training: 8.0323e-05, 
+Validation: 8.0240e-05, velocity: 3.6979e-02, l1: 6.2818e+00
+[2025-01-03 20:41:19,724][__main__][INFO] - Epoch: 301/1000, learning_rate: 0.006917, Training: 7.0819e-05, 
+Validation: 7.0761e-05, velocity: 3.2007e-02, l1: 6.7465e+00
+[2025-01-03 20:42:02,127][__main__][INFO] - Epoch: 401/1000, learning_rate: 0.006120, Training: 6.3176e-05, 
+Validation: 6.3133e-05, velocity: 2.7761e-02, l1: 7.6114e+00
+[2025-01-03 20:42:45,147][__main__][INFO] - Epoch: 501/1000, learning_rate: 0.005414, Training: 5.7125e-05, 
+Validation: 5.7088e-05, velocity: 2.4170e-02, l1: 8.7484e+00
+[2025-01-03 20:43:26,446][__main__][INFO] - Epoch: 601/1000, learning_rate: 0.004790, Training: 5.2398e-05, 
+Validation: 5.2372e-05, velocity: 2.1176e-02, l1: 1.0020e+01
+[2025-01-03 20:44:08,540][__main__][INFO] - Epoch: 701/1000, learning_rate: 0.004238, Training: 4.8687e-05, 
+Validation: 4.8665e-05, velocity: 1.8683e-02, l1: 1.1300e+01
+[2025-01-03 20:44:52,317][__main__][INFO] - Epoch: 801/1000, learning_rate: 0.003750, Training: 4.5649e-05, 
+Validation: 4.5631e-05, velocity: 1.6594e-02, l1: 1.2443e+01
+[2025-01-03 20:45:36,473][__main__][INFO] - Epoch: 901/1000, learning_rate: 0.003317, Training: 4.3168e-05, 
+Validation: 4.3154e-05, velocity: 1.4839e-02, l1: 1.3476e+01
+[2025-01-03 20:46:20,591][__main__][INFO] - Updated acceleration function: 0.3667*f-4.5250*x-1.1198*y-8.3743*tf.pow(x, 3)
+[2025-01-03 20:46:20,596][__main__][INFO] - ------------------------------------------------------------------------------------------------------
+[2025-01-03 20:46:20,597][__main__][INFO] - Iteration 1, Network training
+[2025-01-03 20:46:20,972][__main__][INFO] - Epoch: 1/800, learning_rate: 0.000999, Training: 2.7194e-02, 
+Validation: 2.8298e-02, displacement: 1.6293e-02, velocity: 6.0025e+00, 
+[2025-01-03 20:46:58,663][__main__][INFO] - Epoch: 101/800, learning_rate: 0.000941, Training: 6.3341e-04, 
+Validation: 6.6061e-04, displacement: 6.3426e-04, velocity: 1.3173e-02, 
+[2025-01-03 20:47:33,841][__main__][INFO] - Epoch: 201/800, learning_rate: 0.000885, Training: 6.2948e-04, 
+Validation: 6.5629e-04, displacement: 6.2999e-04, velocity: 1.3150e-02, 
+[2025-01-03 20:48:07,171][__main__][INFO] - Epoch: 301/800, learning_rate: 0.000833, Training: 6.2923e-04, 
+Validation: 6.5554e-04, displacement: 6.2926e-04, velocity: 1.3139e-02, 
+[2025-01-03 20:48:39,119][__main__][INFO] - Epoch: 401/800, learning_rate: 0.000784, Training: 6.5382e-04, 
+Validation: 7.2067e-04, displacement: 6.6339e-04, velocity: 2.8637e-02, 
+[2025-01-03 20:49:10,472][__main__][INFO] - Epoch: 501/800, learning_rate: 0.000738, Training: 6.4478e-04, 
+Validation: 6.5734e-04, displacement: 6.3094e-04, velocity: 1.3199e-02, 
+[2025-01-03 20:49:42,022][__main__][INFO] - Epoch: 601/800, learning_rate: 0.000695, Training: 6.3148e-04, 
+Validation: 6.5572e-04, displacement: 6.2933e-04, velocity: 1.3194e-02, 
+[2025-01-03 20:50:14,041][__main__][INFO] - Epoch: 701/800, learning_rate: 0.000654, Training: 6.3113e-04, 
+Validation: 6.5590e-04, displacement: 6.2949e-04, velocity: 1.3205e-02, 
+[2025-01-03 20:50:47,300][__main__][INFO] - ------------------------------------------------------------------------------------------------------
+[2025-01-03 20:50:47,301][__main__][INFO] - Iteration 2, Physics training
+[2025-01-03 20:50:47,680][__main__][INFO] - Epoch: 1/1000, learning_rate: 0.002935, Training: 4.0864e-05, 
+Validation: 4.0847e-05, velocity: 1.3225e-02, l1: 1.4397e+01
+[2025-01-03 20:51:25,090][__main__][INFO] - Epoch: 101/1000, learning_rate: 0.002597, Training: 3.9045e-05, 
+Validation: 3.9036e-05, velocity: 1.1906e-02, l1: 1.5224e+01
+[2025-01-03 20:52:01,480][__main__][INFO] - Epoch: 201/1000, learning_rate: 0.002297, Training: 3.7774e-05, 
+Validation: 3.7766e-05, velocity: 1.0883e-02, l1: 1.5999e+01
+[2025-01-03 20:52:38,192][__main__][INFO] - Epoch: 301/1000, learning_rate: 0.002033, Training: 3.6744e-05, 
+Validation: 3.6737e-05, velocity: 1.0012e-02, l1: 1.6714e+01
+[2025-01-03 20:53:16,716][__main__][INFO] - Epoch: 401/1000, learning_rate: 0.001798, Training: 3.5908e-05, 
+Validation: 3.5903e-05, velocity: 9.2670e-03, l1: 1.7369e+01
+[2025-01-03 20:53:52,674][__main__][INFO] - Epoch: 501/1000, learning_rate: 0.001591, Training: 3.5229e-05, 
+Validation: 3.5225e-05, velocity: 8.6301e-03, l1: 1.7965e+01
+[2025-01-03 20:54:28,378][__main__][INFO] - Epoch: 601/1000, learning_rate: 0.001408, Training: 3.4678e-05, 
+Validation: 3.4676e-05, velocity: 8.0850e-03, l1: 1.8506e+01
+[2025-01-03 20:55:04,172][__main__][INFO] - Epoch: 701/1000, learning_rate: 0.001245, Training: 3.4231e-05, 
+Validation: 3.4229e-05, velocity: 7.6179e-03, l1: 1.8993e+01
+[2025-01-03 20:55:41,204][__main__][INFO] - Epoch: 801/1000, learning_rate: 0.001102, Training: 3.3866e-05, 
+Validation: 3.3864e-05, velocity: 7.2174e-03, l1: 1.9429e+01
+[2025-01-03 20:56:18,472][__main__][INFO] - Epoch: 901/1000, learning_rate: 0.001000, Training: 3.3570e-05, 
+Validation: 3.3567e-05, velocity: 6.8727e-03, l1: 1.9822e+01
+[2025-01-03 20:56:55,959][__main__][INFO] - Updated acceleration function: 0.6328*f-6.4225*x-3.6423*y-9.5006*tf.pow(x, 3)
+[2025-01-03 20:56:55,965][__main__][INFO] - ------------------------------------------------------------------------------------------------------
+[2025-01-03 20:56:55,965][__main__][INFO] - Iteration 2, Network training
+[2025-01-03 20:56:56,302][__main__][INFO] - Epoch: 1/800, learning_rate: 0.000615, Training: 1.0186e-03, 
+Validation: 2.8018e-02, displacement: 9.5242e-03, velocity: 9.2467e+00, 
+[2025-01-03 20:57:27,957][__main__][INFO] - Epoch: 101/800, learning_rate: 0.000579, Training: 6.8103e-04, 
+Validation: 7.1206e-04, displacement: 6.9535e-04, velocity: 8.3555e-03, 
+[2025-01-03 20:58:01,103][__main__][INFO] - Epoch: 201/800, learning_rate: 0.000545, Training: 8.6917e-04, 
+Validation: 6.8097e-04, displacement: 6.4598e-04, velocity: 1.7495e-02, 
+[2025-01-03 20:58:35,453][__main__][INFO] - Epoch: 301/800, learning_rate: 0.000513, Training: 6.1704e-04, 
+Validation: 6.4635e-04, displacement: 6.3323e-04, velocity: 6.5627e-03, 
+[2025-01-03 20:59:08,953][__main__][INFO] - Epoch: 401/800, learning_rate: 0.000500, Training: 6.1527e-04, 
+Validation: 6.4399e-04, displacement: 6.3124e-04, velocity: 6.3736e-03, 
+[2025-01-03 20:59:42,000][__main__][INFO] - Epoch: 501/800, learning_rate: 0.000500, Training: 6.1464e-04, 
+Validation: 6.4399e-04, displacement: 6.3107e-04, velocity: 6.4604e-03, 
+[2025-01-03 21:00:15,045][__main__][INFO] - Epoch: 601/800, learning_rate: 0.000500, Training: 6.2123e-04, 
+Validation: 6.4324e-04, displacement: 6.2969e-04, velocity: 6.7755e-03, 
+[2025-01-03 21:00:46,653][__main__][INFO] - Epoch: 701/800, learning_rate: 0.000500, Training: 6.1509e-04, 
+Validation: 6.4372e-04, displacement: 6.3077e-04, velocity: 6.4766e-03, 
+[2025-01-03 21:01:19,800][__main__][INFO] - ------------------------------------------------------------------------------------------------------
+[2025-01-03 21:01:19,800][__main__][INFO] - Iteration 3, Physics training
+[2025-01-03 21:01:20,185][__main__][INFO] - Epoch: 1/1000, learning_rate: 0.001000, Training: 3.2889e-05, 
+Validation: 3.2881e-05, velocity: 6.3397e-03, l1: 2.0202e+01
+[2025-01-03 21:01:59,184][__main__][INFO] - Epoch: 101/1000, learning_rate: 0.001000, Training: 3.2350e-05, 
+Validation: 3.2348e-05, velocity: 5.9640e-03, l1: 2.0420e+01
+[2025-01-03 21:02:39,564][__main__][INFO] - Epoch: 201/1000, learning_rate: 0.001000, Training: 3.2011e-05, 
+Validation: 3.2009e-05, velocity: 5.6742e-03, l1: 2.0661e+01
+[2025-01-03 21:03:19,384][__main__][INFO] - Epoch: 301/1000, learning_rate: 0.001000, Training: 3.1729e-05, 
+Validation: 3.1727e-05, velocity: 5.4060e-03, l1: 2.0915e+01
+[2025-01-03 21:03:55,662][__main__][INFO] - Epoch: 401/1000, learning_rate: 0.001000, Training: 3.1498e-05, 
+Validation: 3.1496e-05, velocity: 5.1596e-03, l1: 2.1177e+01
+[2025-01-03 21:04:31,537][__main__][INFO] - Epoch: 501/1000, learning_rate: 0.001000, Training: 3.1311e-05, 
+Validation: 3.1310e-05, velocity: 4.9346e-03, l1: 2.1440e+01
+[2025-01-03 21:05:09,674][__main__][INFO] - Epoch: 601/1000, learning_rate: 0.001000, Training: 3.1162e-05, 
+Validation: 3.1162e-05, velocity: 4.7303e-03, l1: 2.1701e+01
+[2025-01-03 21:05:45,749][__main__][INFO] - Epoch: 701/1000, learning_rate: 0.001000, Training: 3.1046e-05, 
+Validation: 3.1045e-05, velocity: 4.5459e-03, l1: 2.1954e+01
+[2025-01-03 21:06:21,596][__main__][INFO] - Epoch: 801/1000, learning_rate: 0.001000, Training: 3.0957e-05, 
+Validation: 3.0956e-05, velocity: 4.3803e-03, l1: 2.2196e+01
+[2025-01-03 21:06:56,937][__main__][INFO] - Epoch: 901/1000, learning_rate: 0.001000, Training: 3.0889e-05, 
+Validation: 3.0888e-05, velocity: 4.2325e-03, l1: 2.2423e+01
+[2025-01-03 21:07:33,111][__main__][INFO] - Updated acceleration function: 0.7652*f-7.6034*x-5.4483*y-8.8148*tf.pow(x, 3)
+[2025-01-03 21:07:33,115][__main__][INFO] - ------------------------------------------------------------------------------------------------------
+[2025-01-03 21:07:33,115][__main__][INFO] - Iteration 3, Network training
+[2025-01-03 21:07:33,440][__main__][INFO] - Epoch: 1/800, learning_rate: 0.000500, Training: 6.5551e-04, 
+Validation: 1.2189e-03, displacement: 7.7807e-04, velocity: 2.2041e-01, 
+[2025-01-03 21:08:07,432][__main__][INFO] - Epoch: 101/800, learning_rate: 0.000500, Training: 6.0977e-04, 
+Validation: 6.3765e-04, displacement: 6.2962e-04, velocity: 4.0116e-03, 
+[2025-01-03 21:08:38,955][__main__][INFO] - Epoch: 201/800, learning_rate: 0.000500, Training: 6.1846e-04, 
+Validation: 6.4707e-04, displacement: 6.3408e-04, velocity: 6.4924e-03, 
+[2025-01-03 21:09:10,479][__main__][INFO] - Epoch: 301/800, learning_rate: 0.000500, Training: 6.1039e-04, 
+Validation: 6.4095e-04, displacement: 6.3188e-04, velocity: 4.5372e-03, 
+[2025-01-03 21:09:42,332][__main__][INFO] - Epoch: 401/800, learning_rate: 0.000500, Training: 6.0999e-04, 
+Validation: 6.3884e-04, displacement: 6.3088e-04, velocity: 3.9795e-03, 
+[2025-01-03 21:10:14,872][__main__][INFO] - Epoch: 501/800, learning_rate: 0.000500, Training: 6.1218e-04, 
+Validation: 6.3850e-04, displacement: 6.3008e-04, velocity: 4.2081e-03, 
+[2025-01-03 21:10:46,540][__main__][INFO] - Epoch: 601/800, learning_rate: 0.000500, Training: 6.1165e-04, 
+Validation: 6.3900e-04, displacement: 6.3104e-04, velocity: 3.9780e-03, 
+[2025-01-03 21:11:17,959][__main__][INFO] - Epoch: 701/800, learning_rate: 0.000500, Training: 6.2364e-04, 
+Validation: 6.4657e-04, displacement: 6.3388e-04, velocity: 6.3440e-03, 
+[2025-01-03 21:11:49,899][__main__][INFO] - ------------------------------------------------------------------------------------------------------
+[2025-01-03 21:11:49,900][__main__][INFO] - Iteration 4, Physics training
+[2025-01-03 21:11:50,256][__main__][INFO] - Epoch: 1/1000, learning_rate: 0.001000, Training: 3.0662e-05, 
+Validation: 3.0658e-05, velocity: 4.0117e-03, l1: 2.2634e+01
+[2025-01-03 21:12:25,105][__main__][INFO] - Epoch: 101/1000, learning_rate: 0.001000, Training: 3.0578e-05, 
+Validation: 3.0577e-05, velocity: 3.8958e-03, l1: 2.2786e+01
+[2025-01-03 21:12:59,177][__main__][INFO] - Epoch: 201/1000, learning_rate: 0.001000, Training: 3.0542e-05, 
+Validation: 3.0542e-05, velocity: 3.8054e-03, l1: 2.2931e+01
+[2025-01-03 21:13:33,901][__main__][INFO] - Epoch: 301/1000, learning_rate: 0.001000, Training: 3.0519e-05, 
+Validation: 3.0519e-05, velocity: 3.7274e-03, l1: 2.3064e+01
+[2025-01-03 21:14:08,681][__main__][INFO] - Epoch: 401/1000, learning_rate: 0.001000, Training: 3.0503e-05, 
+Validation: 3.0503e-05, velocity: 3.6606e-03, l1: 2.3182e+01
+[2025-01-03 21:14:41,884][__main__][INFO] - Epoch: 501/1000, learning_rate: 0.001000, Training: 3.0493e-05, 
+Validation: 3.0493e-05, velocity: 3.6039e-03, l1: 2.3285e+01
+[2025-01-03 21:15:15,459][__main__][INFO] - Epoch: 601/1000, learning_rate: 0.001000, Training: 3.0486e-05, 
+Validation: 3.0486e-05, velocity: 3.5565e-03, l1: 2.3373e+01
+[2025-01-03 21:15:48,287][__main__][INFO] - Epoch: 701/1000, learning_rate: 0.001000, Training: 3.0483e-05, 
+Validation: 3.0482e-05, velocity: 3.5177e-03, l1: 2.3447e+01
+[2025-01-03 21:16:20,585][__main__][INFO] - Epoch: 801/1000, learning_rate: 0.001000, Training: 3.0480e-05, 
+Validation: 3.0480e-05, velocity: 3.4867e-03, l1: 2.3507e+01
+[2025-01-03 21:16:52,192][__main__][INFO] - Epoch: 901/1000, learning_rate: 0.001000, Training: 3.0479e-05, 
+Validation: 3.0479e-05, velocity: 3.4626e-03, l1: 2.3554e+01
+[2025-01-03 21:17:24,033][__main__][INFO] - Updated acceleration function: 0.8051*f-7.9218*x-6.3022*y-8.5589*tf.pow(x, 3)
+[2025-01-03 21:17:24,037][__main__][INFO] - ------------------------------------------------------------------------------------------------------
+[2025-01-03 21:17:24,038][__main__][INFO] - Iteration 4, Network training
+[2025-01-03 21:17:24,347][__main__][INFO] - Epoch: 1/800, learning_rate: 0.000500, Training: 6.3627e-04, 
+Validation: 1.1717e-03, displacement: 7.6309e-04, velocity: 2.0432e-01, 
+[2025-01-03 21:17:55,554][__main__][INFO] - Epoch: 101/800, learning_rate: 0.000500, Training: 6.2183e-04, 
+Validation: 6.5122e-04, displacement: 6.4405e-04, velocity: 3.5860e-03, 
+[2025-01-03 21:18:27,074][__main__][INFO] - Epoch: 201/800, learning_rate: 0.000500, Training: 6.1057e-04, 
+Validation: 6.3955e-04, displacement: 6.3261e-04, velocity: 3.4677e-03, 
+[2025-01-03 21:18:59,183][__main__][INFO] - Epoch: 301/800, learning_rate: 0.000500, Training: 6.0889e-04, 
+Validation: 6.3779e-04, displacement: 6.3028e-04, velocity: 3.7535e-03, 
+[2025-01-03 21:19:31,606][__main__][INFO] - Epoch: 401/800, learning_rate: 0.000500, Training: 6.0710e-04, 
+Validation: 6.3756e-04, displacement: 6.3102e-04, velocity: 3.2690e-03, 
+[2025-01-03 21:20:03,087][__main__][INFO] - Epoch: 501/800, learning_rate: 0.000500, Training: 6.1004e-04, 
+Validation: 6.3764e-04, displacement: 6.3109e-04, velocity: 3.2783e-03, 
+[2025-01-03 21:20:34,992][__main__][INFO] - Epoch: 601/800, learning_rate: 0.000500, Training: 6.0645e-04, 
+Validation: 6.3744e-04, displacement: 6.3090e-04, velocity: 3.2708e-03, 
+[2025-01-03 21:21:06,066][__main__][INFO] - Epoch: 701/800, learning_rate: 0.000500, Training: 6.0663e-04, 
+Validation: 6.3744e-04, displacement: 6.3089e-04, velocity: 3.2707e-03, 
+[2025-01-03 21:21:38,033][__main__][INFO] - ------------------------------------------------------------------------------------------------------
+[2025-01-03 21:21:38,033][__main__][INFO] - Iteration 5, Physics training
+[2025-01-03 21:21:38,388][__main__][INFO] - Epoch: 1/1000, learning_rate: 0.001000, Training: 3.0258e-05, 
+Validation: 3.0243e-05, velocity: 3.3282e-03, l1: 2.3587e+01
+[2025-01-03 21:22:12,121][__main__][INFO] - Epoch: 101/1000, learning_rate: 0.001000, Training: 3.0216e-05, 
+Validation: 3.0217e-05, velocity: 3.3176e-03, l1: 2.3581e+01
+[2025-01-03 21:22:43,608][__main__][INFO] - Epoch: 201/1000, learning_rate: 0.001000, Training: 3.0214e-05, 
+Validation: 3.0214e-05, velocity: 3.3321e-03, l1: 2.3550e+01
+[2025-01-03 21:23:14,862][__main__][INFO] - Epoch: 301/1000, learning_rate: 0.001000, Training: 3.0213e-05, 
+Validation: 3.0213e-05, velocity: 3.3448e-03, l1: 2.3523e+01
+[2025-01-03 21:23:46,079][__main__][INFO] - Epoch: 401/1000, learning_rate: 0.001000, Training: 3.0213e-05, 
+Validation: 3.0213e-05, velocity: 3.3543e-03, l1: 2.3504e+01
+[2025-01-03 21:24:16,694][__main__][INFO] - Epoch: 501/1000, learning_rate: 0.001000, Training: 3.0213e-05, 
+Validation: 3.0213e-05, velocity: 3.3612e-03, l1: 2.3491e+01
+[2025-01-03 21:24:47,424][__main__][INFO] - Epoch: 601/1000, learning_rate: 0.001000, Training: 3.0213e-05, 
+Validation: 3.0213e-05, velocity: 3.3662e-03, l1: 2.3480e+01
+[2025-01-03 21:25:17,936][__main__][INFO] - Epoch: 701/1000, learning_rate: 0.001000, Training: 3.0212e-05, 
+Validation: 3.0213e-05, velocity: 3.3697e-03, l1: 2.3473e+01
+[2025-01-03 21:25:49,190][__main__][INFO] - Epoch: 801/1000, learning_rate: 0.001000, Training: 3.0212e-05, 
+Validation: 3.0212e-05, velocity: 3.3723e-03, l1: 2.3468e+01
+[2025-01-03 21:26:21,385][__main__][INFO] - Epoch: 901/1000, learning_rate: 0.001000, Training: 3.0213e-05, 
+Validation: 3.0212e-05, velocity: 3.3740e-03, l1: 2.3464e+01
+[2025-01-03 21:26:54,196][__main__][INFO] - Updated acceleration function: 0.8076*f-8.0329*x-6.3565*y-8.2639*tf.pow(x, 3)
+[2025-01-03 21:26:54,202][__main__][INFO] - ------------------------------------------------------------------------------------------------------
+[2025-01-03 21:26:54,202][__main__][INFO] - Iteration 5, Network training
+[2025-01-03 21:26:54,545][__main__][INFO] - Epoch: 1/800, learning_rate: 0.000500, Training: 6.3040e-04, 
+Validation: 8.8994e-04, displacement: 7.0082e-04, velocity: 9.4559e-02, 
+[2025-01-03 21:27:27,306][__main__][INFO] - Epoch: 101/800, learning_rate: 0.000500, Training: 6.1134e-04, 
+Validation: 6.3751e-04, displacement: 6.3107e-04, velocity: 3.2238e-03, 
+[2025-01-03 21:27:59,250][__main__][INFO] - Epoch: 201/800, learning_rate: 0.000500, Training: 6.1893e-04, 
+Validation: 6.4556e-04, displacement: 6.3467e-04, velocity: 5.4450e-03, 
+[2025-01-03 21:28:31,080][__main__][INFO] - Epoch: 301/800, learning_rate: 0.000500, Training: 6.1814e-04, 
+Validation: 6.5542e-04, displacement: 6.3790e-04, velocity: 8.7566e-03, 
+[2025-01-03 21:29:02,941][__main__][INFO] - Epoch: 401/800, learning_rate: 0.000500, Training: 6.0839e-04, 
+Validation: 6.3966e-04, displacement: 6.3230e-04, velocity: 3.6823e-03, 
+[2025-01-03 21:29:34,332][__main__][INFO] - Epoch: 501/800, learning_rate: 0.000500, Training: 6.0776e-04, 
+Validation: 6.3787e-04, displacement: 6.3134e-04, velocity: 3.2650e-03, 
+[2025-01-03 21:30:06,059][__main__][INFO] - Epoch: 601/800, learning_rate: 0.000500, Training: 6.0807e-04, 
+Validation: 6.3815e-04, displacement: 6.3155e-04, velocity: 3.3007e-03, 
+[2025-01-03 21:30:36,962][__main__][INFO] - Epoch: 701/800, learning_rate: 0.000500, Training: 6.0840e-04, 
+Validation: 6.3782e-04, displacement: 6.3134e-04, velocity: 3.2428e-03, 
+[2025-01-03 21:31:08,948][__main__][INFO] - ------------------------------------------------------------------------------------------------------
+[2025-01-03 21:31:08,948][__main__][INFO] - Iteration 6, Physics training
+[2025-01-03 21:31:09,271][__main__][INFO] - Epoch: 1/1000, learning_rate: 0.001000, Training: 3.0394e-05, 
+Validation: 3.0394e-05, velocity: 3.4657e-03, l1: 2.3462e+01
+[2025-01-03 21:31:40,588][__main__][INFO] - Epoch: 101/1000, learning_rate: 0.001000, Training: 3.0389e-05, 
+Validation: 3.0390e-05, velocity: 3.4655e-03, l1: 2.3459e+01
+[2025-01-03 21:32:11,863][__main__][INFO] - Epoch: 201/1000, learning_rate: 0.001000, Training: 3.0389e-05, 
+Validation: 3.0389e-05, velocity: 3.4511e-03, l1: 2.3487e+01
+[2025-01-03 21:32:42,847][__main__][INFO] - Epoch: 301/1000, learning_rate: 0.001000, Training: 3.0388e-05, 
+Validation: 3.0388e-05, velocity: 3.4403e-03, l1: 2.3508e+01
+[2025-01-03 21:33:15,212][__main__][INFO] - Epoch: 401/1000, learning_rate: 0.001000, Training: 3.0388e-05, 
+Validation: 3.0388e-05, velocity: 3.4325e-03, l1: 2.3523e+01
+[2025-01-03 21:33:46,322][__main__][INFO] - Epoch: 501/1000, learning_rate: 0.001000, Training: 3.0388e-05, 
+Validation: 3.0389e-05, velocity: 3.4270e-03, l1: 2.3535e+01
+[2025-01-03 21:34:17,270][__main__][INFO] - Epoch: 601/1000, learning_rate: 0.001000, Training: 3.0388e-05, 
+Validation: 3.0388e-05, velocity: 3.4231e-03, l1: 2.3542e+01
+[2025-01-03 21:34:49,177][__main__][INFO] - Epoch: 701/1000, learning_rate: 0.001000, Training: 3.0388e-05, 
+Validation: 3.0388e-05, velocity: 3.4205e-03, l1: 2.3547e+01
+[2025-01-03 21:35:21,046][__main__][INFO] - Epoch: 801/1000, learning_rate: 0.001000, Training: 3.0388e-05, 
+Validation: 3.0388e-05, velocity: 3.4188e-03, l1: 2.3551e+01
+[2025-01-03 21:35:52,703][__main__][INFO] - Epoch: 901/1000, learning_rate: 0.001000, Training: 3.0388e-05, 
+Validation: 3.0388e-05, velocity: 3.4177e-03, l1: 2.3553e+01
+[2025-01-03 21:36:24,591][__main__][INFO] - Updated acceleration function: 0.8017*f-7.9759*x-6.3286*y-8.4469*tf.pow(x, 3)
+[2025-01-03 21:36:24,595][__main__][INFO] - ------------------------------------------------------------------------------------------------------
+[2025-01-03 21:36:24,595][__main__][INFO] - Iteration 6, Network training
+[2025-01-03 21:36:24,949][__main__][INFO] - Epoch: 1/800, learning_rate: 0.000500, Training: 6.1759e-04, 
+Validation: 6.8302e-04, displacement: 6.4579e-04, velocity: 1.8615e-02, 
+[2025-01-03 21:36:57,119][__main__][INFO] - Epoch: 101/800, learning_rate: 0.000500, Training: 6.0983e-04, 
+Validation: 6.3747e-04, displacement: 6.3093e-04, velocity: 3.2676e-03, 
+[2025-01-03 21:37:28,891][__main__][INFO] - Epoch: 201/800, learning_rate: 0.000500, Training: 6.0873e-04, 
+Validation: 6.3839e-04, displacement: 6.3173e-04, velocity: 3.3301e-03, 
+[2025-01-03 21:38:01,446][__main__][INFO] - Epoch: 301/800, learning_rate: 0.000500, Training: 6.0877e-04, 
+Validation: 6.3804e-04, displacement: 6.3148e-04, velocity: 3.2794e-03, 
+[2025-01-03 21:38:33,498][__main__][INFO] - Epoch: 401/800, learning_rate: 0.000500, Training: 6.0945e-04, 
+Validation: 6.4424e-04, displacement: 6.3424e-04, velocity: 4.9972e-03, 
+[2025-01-03 21:39:05,600][__main__][INFO] - Epoch: 501/800, learning_rate: 0.000500, Training: 6.0881e-04, 
+Validation: 6.3804e-04, displacement: 6.3153e-04, velocity: 3.2555e-03, 
+[2025-01-03 21:39:37,907][__main__][INFO] - Epoch: 601/800, learning_rate: 0.000500, Training: 6.0891e-04, 
+Validation: 6.3829e-04, displacement: 6.3173e-04, velocity: 3.2840e-03, 
+[2025-01-03 21:40:10,546][__main__][INFO] - Epoch: 701/800, learning_rate: 0.000500, Training: 6.0903e-04, 
+Validation: 6.3804e-04, displacement: 6.3155e-04, velocity: 3.2462e-03, 
+[2025-01-03 21:40:42,985][__main__][INFO] - ------------------------------------------------------------------------------------------------------
+[2025-01-03 21:40:42,985][__main__][INFO] - Iteration 7, Physics training
+[2025-01-03 21:40:43,316][__main__][INFO] - Epoch: 1/1000, learning_rate: 0.001000, Training: 3.0292e-05, 
+Validation: 3.0290e-05, velocity: 3.3698e-03, l1: 2.3550e+01
+[2025-01-03 21:41:14,740][__main__][INFO] - Epoch: 101/1000, learning_rate: 0.001000, Training: 3.0287e-05, 
+Validation: 3.0286e-05, velocity: 3.3682e-03, l1: 2.3550e+01
+[2025-01-03 21:41:46,469][__main__][INFO] - Epoch: 201/1000, learning_rate: 0.001000, Training: 3.0287e-05, 
+Validation: 3.0286e-05, velocity: 3.3804e-03, l1: 2.3525e+01
+[2025-01-03 21:42:18,462][__main__][INFO] - Epoch: 301/1000, learning_rate: 0.001000, Training: 3.0287e-05, 
+Validation: 3.0286e-05, velocity: 3.3889e-03, l1: 2.3508e+01
+[2025-01-03 21:42:49,833][__main__][INFO] - Epoch: 401/1000, learning_rate: 0.001000, Training: 3.0286e-05, 
+Validation: 3.0286e-05, velocity: 3.3947e-03, l1: 2.3496e+01
+[2025-01-03 21:43:21,319][__main__][INFO] - Epoch: 501/1000, learning_rate: 0.001000, Training: 3.0287e-05, 
+Validation: 3.0286e-05, velocity: 3.3986e-03, l1: 2.3488e+01
+[2025-01-03 21:43:53,402][__main__][INFO] - Epoch: 601/1000, learning_rate: 0.001000, Training: 3.0286e-05, 
+Validation: 3.0286e-05, velocity: 3.4012e-03, l1: 2.3484e+01
+[2025-01-03 21:44:25,110][__main__][INFO] - Epoch: 701/1000, learning_rate: 0.001000, Training: 3.0286e-05, 
+Validation: 3.0286e-05, velocity: 3.4028e-03, l1: 2.3480e+01
+[2025-01-03 21:44:56,837][__main__][INFO] - Epoch: 801/1000, learning_rate: 0.001000, Training: 3.0286e-05, 
+Validation: 3.0286e-05, velocity: 3.4039e-03, l1: 2.3478e+01
+[2025-01-03 21:45:28,361][__main__][INFO] - Epoch: 901/1000, learning_rate: 0.001000, Training: 3.0287e-05, 
+Validation: 3.0286e-05, velocity: 3.4046e-03, l1: 2.3476e+01
+[2025-01-03 21:45:59,394][__main__][INFO] - Updated acceleration function: 0.8018*f-8.0186*x-6.3324*y-8.3220*tf.pow(x, 3)
+[2025-01-03 21:45:59,399][__main__][INFO] - ------------------------------------------------------------------------------------------------------
+[2025-01-03 21:45:59,399][__main__][INFO] - Iteration 7, Network training
+[2025-01-03 21:45:59,712][__main__][INFO] - Epoch: 1/800, learning_rate: 0.000500, Training: 6.4702e-04, 
+Validation: 1.0537e-03, displacement: 7.4151e-04, velocity: 1.5607e-01, 
+[2025-01-03 21:46:31,570][__main__][INFO] - Epoch: 101/800, learning_rate: 0.000500, Training: 6.0640e-04, 
+Validation: 6.3682e-04, displacement: 6.3038e-04, velocity: 3.2202e-03, 
+[2025-01-03 21:47:03,799][__main__][INFO] - Epoch: 201/800, learning_rate: 0.000500, Training: 6.0644e-04, 
+Validation: 6.3686e-04, displacement: 6.3038e-04, velocity: 3.2366e-03, 
+[2025-01-03 21:47:35,321][__main__][INFO] - Epoch: 301/800, learning_rate: 0.000500, Training: 6.0799e-04, 
+Validation: 6.3704e-04, displacement: 6.3061e-04, velocity: 3.2152e-03, 
+[2025-01-03 21:48:07,243][__main__][INFO] - Epoch: 401/800, learning_rate: 0.000500, Training: 6.1238e-04, 
+Validation: 6.4028e-04, displacement: 6.3260e-04, velocity: 3.8383e-03, 
+[2025-01-03 21:48:39,138][__main__][INFO] - Epoch: 501/800, learning_rate: 0.000500, Training: 6.1224e-04, 
+Validation: 6.4702e-04, displacement: 6.3520e-04, velocity: 5.9082e-03, 
+[2025-01-03 21:49:11,020][__main__][INFO] - Epoch: 601/800, learning_rate: 0.000500, Training: 6.0787e-04, 
+Validation: 6.3867e-04, displacement: 6.3184e-04, velocity: 3.4152e-03, 
+[2025-01-03 21:49:43,009][__main__][INFO] - Epoch: 701/800, learning_rate: 0.000500, Training: 6.0776e-04, 
+Validation: 6.3774e-04, displacement: 6.3128e-04, velocity: 3.2320e-03, 
+[2025-01-03 21:50:15,848][__main__][INFO] - ------------------------------------------------------------------------------------------------------
+[2025-01-03 21:50:15,848][__main__][INFO] - Iteration 8, Physics training
+[2025-01-03 21:50:16,261][__main__][INFO] - Epoch: 1/1000, learning_rate: 0.001000, Training: 2.9953e-05, 
+Validation: 2.9907e-05, velocity: 3.2182e-03, l1: 2.3470e+01
+[2025-01-03 21:50:50,760][__main__][INFO] - Epoch: 101/1000, learning_rate: 0.001000, Training: 2.9870e-05, 
+Validation: 2.9869e-05, velocity: 3.2175e-03, l1: 2.3434e+01
+[2025-01-03 21:51:23,947][__main__][INFO] - Epoch: 201/1000, learning_rate: 0.001000, Training: 2.9866e-05, 
+Validation: 2.9865e-05, velocity: 3.2569e-03, l1: 2.3351e+01
+[2025-01-03 21:51:56,715][__main__][INFO] - Epoch: 301/1000, learning_rate: 0.001000, Training: 2.9864e-05, 
+Validation: 2.9864e-05, velocity: 3.2865e-03, l1: 2.3291e+01
+[2025-01-03 21:52:29,368][__main__][INFO] - Epoch: 401/1000, learning_rate: 0.001000, Training: 2.9863e-05, 
+Validation: 2.9863e-05, velocity: 3.3082e-03, l1: 2.3246e+01
+[2025-01-03 21:53:01,778][__main__][INFO] - Epoch: 501/1000, learning_rate: 0.001000, Training: 2.9863e-05, 
+Validation: 2.9862e-05, velocity: 3.3238e-03, l1: 2.3215e+01
+[2025-01-03 21:53:33,681][__main__][INFO] - Epoch: 601/1000, learning_rate: 0.001000, Training: 2.9862e-05, 
+Validation: 2.9862e-05, velocity: 3.3350e-03, l1: 2.3192e+01
+[2025-01-03 21:54:05,378][__main__][INFO] - Epoch: 701/1000, learning_rate: 0.001000, Training: 2.9862e-05, 
+Validation: 2.9862e-05, velocity: 3.3428e-03, l1: 2.3177e+01
+[2025-01-03 21:54:37,284][__main__][INFO] - Epoch: 801/1000, learning_rate: 0.001000, Training: 2.9862e-05, 
+Validation: 2.9862e-05, velocity: 3.3481e-03, l1: 2.3165e+01
+[2025-01-03 21:55:08,766][__main__][INFO] - Epoch: 901/1000, learning_rate: 0.001000, Training: 2.9862e-05, 
+Validation: 2.9862e-05, velocity: 3.3518e-03, l1: 2.3158e+01
+[2025-01-03 21:55:40,828][__main__][INFO] - Updated acceleration function: 0.7998*f-8.1546*x-6.3155*y-7.8826*tf.pow(x, 3)
+[2025-01-03 21:55:40,833][__main__][INFO] - ------------------------------------------------------------------------------------------------------
+[2025-01-03 21:55:40,833][__main__][INFO] - Iteration 8, Network training
+[2025-01-03 21:55:41,154][__main__][INFO] - Epoch: 1/800, learning_rate: 0.000500, Training: 6.1191e-04, 
+Validation: 6.6229e-04, displacement: 6.4020e-04, velocity: 1.1048e-02, 
+[2025-01-03 21:56:13,464][__main__][INFO] - Epoch: 101/800, learning_rate: 0.000500, Training: 6.0830e-04, 
+Validation: 6.3783e-04, displacement: 6.3139e-04, velocity: 3.2180e-03, 
+[2025-01-03 21:56:45,210][__main__][INFO] - Epoch: 201/800, learning_rate: 0.000500, Training: 6.7268e-04, 
+Validation: 6.9218e-04, displacement: 6.3757e-04, velocity: 2.7305e-02, 
+[2025-01-03 21:57:17,289][__main__][INFO] - Epoch: 301/800, learning_rate: 0.000500, Training: 6.0842e-04, 
+Validation: 6.3794e-04, displacement: 6.3149e-04, velocity: 3.2229e-03, 
+[2025-01-03 21:57:48,923][__main__][INFO] - Epoch: 401/800, learning_rate: 0.000500, Training: 6.0888e-04, 
+Validation: 6.4405e-04, displacement: 6.3435e-04, velocity: 4.8503e-03, 
+[2025-01-03 21:58:21,237][__main__][INFO] - Epoch: 501/800, learning_rate: 0.000500, Training: 6.0843e-04, 
+Validation: 6.3799e-04, displacement: 6.3153e-04, velocity: 3.2296e-03, 
+[2025-01-03 21:58:53,056][__main__][INFO] - Epoch: 601/800, learning_rate: 0.000500, Training: 6.0870e-04, 
+Validation: 6.3804e-04, displacement: 6.3159e-04, velocity: 3.2271e-03, 
+[2025-01-03 21:59:24,403][__main__][INFO] - Epoch: 701/800, learning_rate: 0.000500, Training: 6.0839e-04, 
+Validation: 6.3812e-04, displacement: 6.3163e-04, velocity: 3.2429e-03, 

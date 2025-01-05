@@ -1,0 +1,24 @@
+{
+    "cSpell.words": [
+        "arange",
+        "DNNLSTM",
+        "hnetwork",
+        "irfft",
+        "LSTM",
+        "nonautonomous",
+        "omegaconf",
+        "Pcpn",
+        "pnet",
+        "pnetwork",
+        "pretrain",
+        "pretraining",
+        "pysindy",
+        "regularizers",
+        "rfft",
+        "sindy",
+        "STLSQ",
+        "subdir",
+        "tboard",
+        "wsindy"
+    ]
+}
